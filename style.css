@@ -777,7 +777,7 @@ button{
     text-decoration: none;
 }
 .desktop-hidden{
-    display: none !important;
+    display: none;
 }
 /************** Footer stylings - END ****************/
 
@@ -786,6 +786,20 @@ button{
         display: none !important;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu-container .menu a{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        font-variant: all-small-caps;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .hero .hero-text .hero-title{
@@ -806,17 +820,6 @@ button{
         text-align: center;
         padding-right: 0.5rem;
     }
-    .menu-container .menu a{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5;
-        text-align: center;
-        font-variant: all-small-caps;
-        width: 100%;
-        height: 100%;
-    }
-
     .hero .hero-text .hero-btn, .hero .hero-text .social-links, .hero .hero-text .phone-muber{
         width: 30%;
     }
@@ -892,6 +895,9 @@ button{
         flex-direction: column;
         padding-bottom: 2rem;
     }
+    .desktop-hidden{
+        display: flex;
+    }
     .mobile-hidden{
         display: none;
     }
@@ -917,10 +923,10 @@ button{
         position: absolute;
         /* z-index: 100; */
         width: 100%;
-        background: rgba(255, 255, 255, 0.3); /* Dark semi-transparent background */
+        background: rgba(255, 255, 255, 1); /* Dark semi-transparent background */
         backdrop-filter: blur(10px); /* Frosted glass effect */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
         left: 0%;
         border-radius: 27px;
         z-index: -1;
@@ -933,7 +939,7 @@ button{
         flex-direction: column;
         position: absolute;
         z-index: 1000;
-        top: 54px;
+        top: 72px;
         left: 0px;
         width: 100%;
         border-radius: 5px;
@@ -948,10 +954,10 @@ button{
         position: absolute;
         /* z-index: 100; */
         width: 100%;
-        background: rgba(255, 255, 255, 0.9); /* Dark semi-transparent background */
+        background: rgba(255, 255, 255, 1); /* Dark semi-transparent background */
         backdrop-filter: blur(90%); /* Frosted glass effect */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
         border-radius: 5px;
         left: 0%;
         top: 0;
@@ -1010,18 +1016,44 @@ button{
 
     section.hero{
         margin-top: 4rem;
+        padding-bottom: 0rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .hero::before{
+    section.hero::before{
         background: none;
     }
 
-    .hero .hero-text .hero-title{
-        margin-bottom: 2rem;
+    section.hero .hero-text{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        margin-left: 0%;
+        margin: 0rem 5%;
+        justify-content: center;
+        align-items: center;
     }
 
-    .hero .hero-text .hero-btn, .hero .hero-text .social-links, .hero .hero-text .phone-muber{
+    section.hero .hero-text .hero-title{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    section.hero .hero-text .hero-btn, .hero .hero-text .social-links, .hero .hero-text .phone-muber{
         width: 90%;
     }
+
+    section.hero .hero-image{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    section.hero .hero-image img{
+        width: 100%;
+        height: auto;
+    }
+
+
 
     .slider-container{
         padding: 2rem 5%;

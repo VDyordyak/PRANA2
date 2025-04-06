@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('.slider').slick({
       dots: false,
       infinite: true,
-      speed: 500,
+      swipe: true,        // enables swipe gestures (touch devices)
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -19,6 +19,8 @@ $(document).ready(function(){
             slidesToShow: 1,
             centerMode: false,
             autoplay: false,
+            touchMove: true,    // allows dragging/swiping to change slides
+            speed: 500,
             variableWidth: false
           }
         }
@@ -29,6 +31,8 @@ $(document).ready(function(){
   $('.video-slider').slick({
       dots: false,
       infinite: true,
+      swipe: true,
+      touchMove: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -45,7 +49,8 @@ $(document).ready(function(){
           settings: {
             slidesToShow: 1,
             centerMode: false,
-            variableWidth: false
+            variableWidth: false,
+            speed: 500,
           }
         },
         {
@@ -55,7 +60,8 @@ $(document).ready(function(){
             arrows: false,   // Hide prev/next buttons
             slidesToShow: 1,
             centerMode: false,
-            variableWidth: false
+            variableWidth: false,
+            speed: 500,
           }
         }
       ]
