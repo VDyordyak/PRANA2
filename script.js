@@ -50,6 +50,8 @@ $(document).ready(function(){
             slidesToShow: 1,
             centerMode: false,
             variableWidth: false,
+            swipe: true,
+            touchMove: true,
             speed: 500,
           }
         },
