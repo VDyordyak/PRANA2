@@ -24,8 +24,8 @@ h2{
 }
 
 section{
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
 }
 
 
@@ -140,11 +140,11 @@ section{
     width: 70%;
     float: left;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 3.25rem;
     text-transform: uppercase;
     color: #2EABE2;
     text-align: left;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem;
 }
 
 .hero .hero-text .hero-btn,
@@ -277,7 +277,7 @@ section.slider-container .slider-headling{
     margin-top: 2rem;
 }
 .slider-container .slider-content .slider-text{
-    margin-top: 0rem;
+    margin-top: 0.5rem;
     padding-left: 10%;
     width: 90%;
 }
@@ -540,7 +540,7 @@ section.projects .description{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    color: #000000;
+    color: #2EABE2;
 }
 section.projects .swiper-pagination-bullet-active{
     background-color: #2EABE2 ;
@@ -883,9 +883,16 @@ button{
 }
 /************** Footer stylings - END ****************/
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .swiper-pagination-horizontal {
         display: none !important;
+    }
+    .slider-container .slick-list {
+        top: 50%;
+        transform: translateY(-50%) !important;
+    }
+    .slider-container .swiper-button-next, .swiper-button-prev{
+        margin-top: 0px !important;
     }
 }
 
@@ -904,11 +911,11 @@ button{
 
 @media (max-width: 1024px) {
     .hero .hero-text .hero-title{
-        width: 100%;
-        font-size: 40px;
+        width: 95%;
+        font-size: 2.5rem;
     }
     h2{
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .menu{
@@ -1172,7 +1179,7 @@ button{
 
 
     .slider-container{
-        padding: 2rem 5%;
+        padding: 2.5rem 5%;
     }
     section.slider-container .slider{
         width: 90%;
@@ -1193,7 +1200,7 @@ button{
         padding-left: 0px;
     }
     section.slider-container .slider-headling{
-        font-size: 40px;
+        font-size: 2.5rem;
         padding: 0 2%;
         width: 90%;
         text-align: center;
@@ -1222,7 +1229,7 @@ button{
         width: 100%;
     }
     section.contactus-block .contact-information h2{
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     /* Footer */
