@@ -1024,6 +1024,13 @@ button{
         display: none;
     }
 
+    h2{
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
     header{
         display: flex;
         align-items: center;
@@ -1255,7 +1262,7 @@ button{
     }
 
     .popup-content h2{
-        margin-top: 1.5rem;
+        margin-top: 1.5rem !important;
     }
 
     .popup-content .product-attributes{
