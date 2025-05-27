@@ -121,8 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close popup when clicking the close button
   popups.forEach((popup) => {
       const closeButton = popup.querySelector(".popup-close");
+      const buyButton = popup.querySelector(".buy-now-btn");
+
       closeButton.addEventListener("click", () => {
           popup.classList.remove("active");
+      });
+
+      buyButton.addEventListener("click", () => {
+        popup.classList.remove("active");
       });
 
       // Close when clicking outside the popup

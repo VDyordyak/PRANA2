@@ -45,12 +45,12 @@ section{
     border-bottom: 1px solid rgb(255, 255, 255); /* Subtle border */
 }
 
-
-
-.navbar .logo img{
+.navbar .logo img {
     height: 2.2rem;
     margin-left: 2rem;
     width: auto;
+    transform: scale(1.4);          
+    transform-origin: left center;  
 }
 
 .menu-container {
@@ -171,6 +171,41 @@ section{
     color: #2EABE2;
     text-decoration: none; 
 }
+
+.hero .hero-text .phone-muber .contact-info {
+    margin-top: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    font-variant: all-small-caps;
+    color: #2EABE2;
+    line-height: 0.8;
+  }
+  
+  .hero .hero-text .phone-muber .contact-info .email a {
+    color: #2EABE2;
+    text-decoration: none;
+  }
+  
+  .hero .hero-text .phone-muber {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 5px;
+  }
+  
+  .hero .hero-text .phone-muber .contact-info,
+  .hero .hero-text .phone-muber .contact-info a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    font-variant: all-small-caps;
+    color: #2EABE2;
+    text-decoration: none;
+    line-height: 0.9;
+  }
 
 .slider-container {
     display: flex;
@@ -342,7 +377,17 @@ section.about-us .swiper-navBtn{
     color: #2EABE2;
 }
 
-
+.ventilation-warning {
+    background-color: #0d5edd;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 80px; /* додаємо відступ знизу */
+  }
 
 /********* Catalog slider stylings  - START *********/
 
@@ -497,6 +542,19 @@ section.catalogue .card-content .description{
 
 .swiper-pagination-bullet-active {
     background-color: #FFFFFF;
+    
+}
+
+.buy-now-btn, .view-more-btn{
+    width: 60%;
+    margin: 14px;
+    text-decoration: none;
+}
+
+
+.card-content .button.buy-now-btn{
+    background: #5ac235;
+    margin-top: 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -594,8 +652,8 @@ section.projects .swiper-pagination-bullet-active{
     background: #fff;
     color: #2EABE2 !important;
     padding: 1rem;
-    width: 90%;
-    max-width: 89vw !important;
+    width: 100%;
+    max-width: 93vw !important;
     text-align: center;
     border-radius: 8px;
     position: relative;
@@ -627,17 +685,63 @@ section.projects .swiper-pagination-bullet-active{
 
 .attributes-image {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    width: 40%;
+    width: 50%;
+    position: relative;
 }
 
-.attributes-image img{
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    z-index: -1;
+.attributes-image iframe{
+    min-height: 30vh;
+}
+
+
+.d-block-info {
+    position: relative;
+    width: fit-content;
+    margin: 4px auto 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 4px 40px;
+    background-color: #fff;
+    border-radius: 60px;
+    /* box-shadow: 0px 4px 16px rgb(0 0 0 / 4%); */
+}
+
+.d-block-info img {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    max-width: 100%;
+    height: 38px;
+    min-width: 38px;
+    margin: 0 20px 0 0;
+}
+.d-block-info span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.7em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+}
+.attributes-image .button.buy-now-btn{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 12px 40px;
+    background-color: #5ac235;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
 }
 
 .popup-content .attribute {
@@ -909,7 +1013,7 @@ button{
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .hero .hero-text .hero-title{
         width: 95%;
         font-size: 2.5rem;
@@ -996,6 +1100,10 @@ button{
         top: auto;
         transition: transform 1s ease-in-out !important; /* 1s = 1000ms */
     }
+    .attributes-image iframe{
+        height: 100%;
+        aspect-ratio: 16/9;
+    }
 
     section.projects .card-image{
         width: 60%;
@@ -1022,13 +1130,6 @@ button{
     }
     .mobile-hidden{
         display: none;
-    }
-
-    h2{
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 auto !important;
     }
 
     header{
@@ -1262,7 +1363,7 @@ button{
     }
 
     .popup-content h2{
-        margin-top: 1.5rem !important;
+        margin-top: 1.5rem;
     }
 
     .popup-content .product-attributes{
@@ -1280,6 +1381,16 @@ button{
     .attributes-image {
         width: 100%;
     }
+
+    .attributes-image iframe{
+        min-height: 30vh !important;
+        height: 100% !important;
+        aspect-ratio: 16/9;
+    }
+    .attributes-image .button.buy-now-btn{
+        margin-bottom: 2rem;
+    }
+
 
     .popup-content .attributes-left .attribute,
     .popup-content .attributes-right .attribute{
